@@ -1,0 +1,1195 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.6)  18 AUG 2024 16:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/revtex4-1/revtex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for 
+documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 346.
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 471.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 793.
+\intertabularlinepenalty=\count194
+\@tbpen=\count195
+\@arstrutbox@hline=\box52
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1824.
+Class revtex4-1 Info: Making \typeout \long on input line 2089.
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+\c@affil=\count196
+\c@collab=\count197
+\absbox=\box53
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+\c@linecount=\count198
+\output@latex=\toks17
+\box@size@1=\box54
+\box@size@2=\box55
+\@protection@box=\box56
+\@topmark@saved=\toks18
+\footins@saved=\box57
+\footins@recovered=\box58
+\column@recovered=\box59
+\pagesofar=\box60
+\footsofar=\box61
+\pagegrid@col=\count199
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5655.
+\c@part=\count266
+\c@section=\count267
+\c@subsection=\count268
+\c@subsubsection=\count269
+\c@paragraph=\count270
+\c@subparagraph=\count271
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\c@figure=\count272
+\fbox@1=\box62
+\c@table=\count273
+\fbox@2=\box63
+\c@video=\count274
+\fbox@4=\box64
+\@bibdataout=\write3
+\widetext@top=\box65
+\widetext@bot=\box66
+Class revtex4-1 Info: Selecting society aps on input line 7616.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/revtex4-1/aps4-1.rtx
+File: aps4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documentation
+)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+Class revtex4-1 Info: Selecting journal prd on input line 7618.
+Class revtex4-1 Info: APS journal PRD selected on input line 7619.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/revtex4-1/aps10pt4-1.rtx
+File: aps10pt4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documenta
+tion)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2023/07/27 v1.04 Text only upper/lower case changing (DPC)
+Package textcase Info: Defining Legacy names on input line 20.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/05/23 v2.17q AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen141
+)
+LaTeX Info: Redefining \text on input line 28.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count275
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count276
+\leftroot@=\count277
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count278
+\DOTSCASE@=\count279
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box67
+\strutbox@=\box68
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count280
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count281
+\dotsspace@=\muskip17
+\c@parentequation=\count282
+\dspbrk@lvl=\count283
+\tag@help=\toks21
+\row@=\count284
+\column@=\count285
+\maxfields@=\count286
+\andhelp@=\toks22
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks23
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count287
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7623.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/revtex4-1/revsymb4-1.sty
+Package: revsymb4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for docume
+ntation)
+LaTeX Info: Redefining \frak on input line 95.
+LaTeX Info: Redefining \Bbb on input line 111.
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
+\col@sep=\dimen152
+\ar@mcellbox=\box69
+\extrarowheight=\dimen153
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box70
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+LaTeX Info: Redefining \bm on input line 219.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count288
+\multirow@dima=\skip59
+\bigstrutjot=\dimen154
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip60
+\subfigcapskip=\skip61
+\subfigcaptopadj=\dimen155
+\subfigbottomskip=\skip62
+\subfigcapmargin=\dimen156
+\subfiglabelskip=\skip63
+\c@subfigure=\count289
+\c@lofdepth=\count290
+\c@subtable=\count291
+\c@lotdepth=\count292
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2024/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip64
+\subfig@bottom=\skip65
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+
+Package nameref Warning: The definition of \label has changed! 
+(nameref)                Check your packages! 
+(nameref)                Replacing it with the kernel definition on input line 
+149.
+
+\c@section@level=\count293
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count294
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen157
+\Hy@linkcounter=\count295
+\Hy@pagecounter=\count296
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count297
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+LaTeX Info: Redefining \href on input line 4674.
+\c@Hy@tempcnt=\count298
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen158
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count299
+\Field@Width=\dimen159
+\Fld@charsize=\dimen160
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count300
+\c@Item=\count301
+\c@Hfootnote=\count302
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count303
+\c@bookmark@seq@number=\count304
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip66
+)
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 62.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 62.
+Class revtex4-1 Info: Unrecognized array package. Please update this document c
+lass! (Proceeding with fingers crossed.) on input line 64.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 64.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 64.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 64.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box71
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count306
+\scratchdimen=\dimen161
+\scratchbox=\box72
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen162
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 64.
+
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 64.
+\openout3 = `mainNotes.bib'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<../plots/RHNSpectrum_U1.0_AllMass_linXlogY.pdf, id=38, 569.12625pt x 408.52625
+pt>
+File: ../plots/RHNSpectrum_U1.0_AllMass_linXlogY.pdf Graphic file (type pdf)
+<use ../plots/RHNSpectrum_U1.0_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/RHNSpectrum_U1.0_AllMass_linXlogY.pdf  used o
+n input line 91.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/RHNTauCM_vs_M_U2_contour_linXlogYlogZ.png, id=41, 2404.985pt x 1778.6
+45pt>
+File: ../plots/RHNTauCM_vs_M_U2_contour_linXlogYlogZ.png Graphic file (type png
+)
+<use ../plots/RHNTauCM_vs_M_U2_contour_linXlogYlogZ.png>
+Package pdftex.def Info: ../plots/RHNTauCM_vs_M_U2_contour_linXlogYlogZ.png  us
+ed on input line 98.
+(pdftex.def)             Requested size: 243.54135pt x 180.10039pt.
+<../plots/RHNBRvll_vs_M_U2_linXlogYlinZ.png, id=44, 2404.985pt x 1778.645pt>
+File: ../plots/RHNBRvll_vs_M_U2_linXlogYlinZ.png Graphic file (type png)
+<use ../plots/RHNBRvll_vs_M_U2_linXlogYlinZ.png>
+Package pdftex.def Info: ../plots/RHNBRvll_vs_M_U2_linXlogYlinZ.png  used on in
+put line 104.
+(pdftex.def)             Requested size: 243.54135pt x 180.10039pt.
+<../plots/nuLSpectrum_U1.0_AllMass_linXlogY.pdf, id=45, 569.12625pt x 408.52625
+pt>
+File: ../plots/nuLSpectrum_U1.0_AllMass_linXlogY.pdf Graphic file (type pdf)
+<use ../plots/nuLSpectrum_U1.0_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/nuLSpectrum_U1.0_AllMass_linXlogY.pdf  used o
+n input line 111.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/nuLEmissionAngle_U1.0_AllMass_linXlogY.pdf, id=46, 569.12625pt x 408.
+52625pt>
+File: ../plots/nuLEmissionAngle_U1.0_AllMass_linXlogY.pdf Graphic file (type pd
+f)
+<use ../plots/nuLEmissionAngle_U1.0_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/nuLEmissionAngle_U1.0_AllMass_linXlogY.pdf  u
+sed on input line 117.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<figs/emission_angle_sketch.png, id=47, 1348.28719pt x 709.90219pt>
+File: figs/emission_angle_sketch.png Graphic file (type png)
+<use figs/emission_angle_sketch.png>
+Package pdftex.def Info: figs/emission_angle_sketch.png  used on input line 118
+.
+(pdftex.def)             Requested size: 172.19925pt x 90.66568pt.
+ [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../p
+lots/RHNSpectrum_U1.0_AllMass_linXlogY.pdf, page is rotated 90 degrees> <../plo
+ts/RHNTauCM_vs_M_U2_contour_linXlogYlogZ.png> <../plots/RHNBRvll_vs_M_U2_linXlo
+gYlinZ.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 124.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[2 <../plots/nuLSpectrum_U1.0_AllMass_linXlogY.pdf, page is rotated 90 degrees>
+ <../plots/nuLEmissionAngle_U1.0_AllMass_linXlogY.pdf, page is rotated 90 degre
+es> <./figs/emission_angle_sketch.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 124.
+
+<../plots/EeeSpectrum_decay_in_detector_integrate_U1e-06_AllMass_linXlogY.pdf, 
+id=210, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-06_AllMass_linXlogY.
+pdf Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-06_AllMass_linXlogY.p
+df>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-0
+6_AllMass_linXlogY.pdf  used on input line 127.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U1e-05_AllMass_linXlogY.pdf, 
+id=211, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-05_AllMass_linXlogY.
+pdf Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-05_AllMass_linXlogY.p
+df>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U1e-0
+5_AllMass_linXlogY.pdf  used on input line 135.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U0.0001_AllMass_linXlogY.pdf,
+ id=212, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.0001_AllMass_linXlogY
+.pdf Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U0.0001_AllMass_linXlogY.
+pdf>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.00
+01_AllMass_linXlogY.pdf  used on input line 143.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U0.001_AllMass_linXlogY.pdf, 
+id=213, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.001_AllMass_linXlogY.
+pdf Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U0.001_AllMass_linXlogY.p
+df>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.00
+1_AllMass_linXlogY.pdf  used on input line 151.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U0.01_AllMass_linXlogY.pdf, i
+d=214, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.01_AllMass_linXlogY.p
+df Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U0.01_AllMass_linXlogY.pd
+f>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.01
+_AllMass_linXlogY.pdf  used on input line 159.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U0.1_AllMass_linXlogY.pdf, id
+=215, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.1_AllMass_linXlogY.pd
+f Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U0.1_AllMass_linXlogY.pdf
+>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U0.1_
+AllMass_linXlogY.pdf  used on input line 167.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/EeeSpectrum_decay_in_detector_integrate_U1.0_AllMass_linXlogY.pdf, id
+=216, 569.12625pt x 408.52625pt>
+File: ../plots/EeeSpectrum_decay_in_detector_integrate_U1.0_AllMass_linXlogY.pd
+f Graphic file (type pdf)
+<use ../plots/EeeSpectrum_decay_in_detector_integrate_U1.0_AllMass_linXlogY.pdf
+>
+Package pdftex.def Info: ../plots/EeeSpectrum_decay_in_detector_integrate_U1.0_
+AllMass_linXlogY.pdf  used on input line 175.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+[3 <../plots/EeeSpectrum_decay_in_detector_integrate_U1e-06_AllMass_linXlogY.pd
+f, page is rotated 90 degrees> <../plots/EeeSpectrum_decay_in_detector_integrat
+e_U1e-05_AllMass_linXlogY.pdf, page is rotated 90 degrees> <../plots/EeeSpectru
+m_decay_in_detector_integrate_U0.0001_AllMass_linXlogY.pdf, page is rotated 90 
+degrees> <../plots/EeeSpectrum_decay_in_detector_integrate_U0.001_AllMass_linXl
+ogY.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 183.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[4 <../plots/EeeSpectrum_decay_in_detector_integrate_U0.01_AllMass_linXlogY.pdf
+, page is rotated 90 degrees> <../plots/EeeSpectrum_decay_in_detector_integrate
+_U0.1_AllMass_linXlogY.pdf, page is rotated 90 degrees> <../plots/EeeSpectrum_d
+ecay_in_detector_integrate_U1.0_AllMass_linXlogY.pdf, page is rotated 90 degree
+s>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+<figs/decay_inflight_sketch1.png, id=535, 1285.80376pt x 963.6pt>
+File: figs/decay_inflight_sketch1.png Graphic file (type png)
+<use figs/decay_inflight_sketch1.png>
+Package pdftex.def Info: figs/decay_inflight_sketch1.png  used on input line 18
+6.
+(pdftex.def)             Requested size: 135.30075pt x 101.39418pt.
+<figs/decay_inflight_sketch2.png, id=536, 1288.0622pt x 961.34157pt>
+File: figs/decay_inflight_sketch2.png Graphic file (type png)
+<use figs/decay_inflight_sketch2.png>
+Package pdftex.def Info: figs/decay_inflight_sketch2.png  used on input line 18
+7.
+(pdftex.def)             Requested size: 110.69925pt x 82.61508pt.
+<figs/decay_inflight_sketch3.png, id=537, 1286.55656pt x 964.35281pt>
+File: figs/decay_inflight_sketch3.png Graphic file (type png)
+<use figs/decay_inflight_sketch3.png>
+Package pdftex.def Info: figs/decay_inflight_sketch3.png  used on input line 18
+8.
+(pdftex.def)             Requested size: 110.69925pt x 82.96214pt.
+<../plots/DecayInFlightNuLCosthetaSun_U1e-05_M8.0_InsideOutside_linXlinY.pdf, i
+d=538, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U1e-05_M8.0_InsideOutside_linXlinY.p
+df Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U1e-05_M8.0_InsideOutside_linXlinY.pd
+f>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U1e-05_M8.0_Insid
+eOutside_linXlinY.pdf  used on input line 195.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U1e-05_M8.0_InsideOutside_linXlogY.pdf, id=
+539, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U1e-05_M8.0_InsideOutside_linXlogY.pdf
+ Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U1e-05_M8.0_InsideOutside_linXlogY.pdf>
+
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U1e-05_M8.0_InsideO
+utside_linXlogY.pdf  used on input line 202.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U1e-05_AllMass_linXlinY.pdf, id=540, 569.
+12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U1e-05_AllMass_linXlinY.pdf Graphic 
+file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U1e-05_AllMass_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U1e-05_AllMass_li
+nXlinY.pdf  used on input line 208.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U1e-05_AllMass_linXlogY.pdf, id=541, 569.12
+625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U1e-05_AllMass_linXlogY.pdf Graphic fi
+le (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U1e-05_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U1e-05_AllMass_linX
+logY.pdf  used on input line 214.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.0001_M8.0_InsideOutside_linXlinY.pdf, 
+id=542, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.0001_M8.0_InsideOutside_linXlinY.
+pdf Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.0001_M8.0_InsideOutside_linXlinY.p
+df>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.0001_M8.0_Insi
+deOutside_linXlinY.pdf  used on input line 221.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.0001_M8.0_InsideOutside_linXlogY.pdf, id
+=543, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.0001_M8.0_InsideOutside_linXlogY.pd
+f Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.0001_M8.0_InsideOutside_linXlogY.pdf
+>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.0001_M8.0_Inside
+Outside_linXlogY.pdf  used on input line 228.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.0001_AllMass_linXlinY.pdf, id=544, 569
+.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.0001_AllMass_linXlinY.pdf Graphic
+ file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.0001_AllMass_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.0001_AllMass_l
+inXlinY.pdf  used on input line 234.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.0001_AllMass_linXlogY.pdf, id=545, 569.1
+2625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.0001_AllMass_linXlogY.pdf Graphic f
+ile (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.0001_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.0001_AllMass_lin
+XlogY.pdf  used on input line 240.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.001_M6.0_InsideOutside_linXlinY.pdf, i
+d=546, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.001_M6.0_InsideOutside_linXlinY.p
+df Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.001_M6.0_InsideOutside_linXlinY.pd
+f>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.001_M6.0_Insid
+eOutside_linXlinY.pdf  used on input line 247.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.001_M6.0_InsideOutside_linXlogY.pdf, id=
+547, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.001_M6.0_InsideOutside_linXlogY.pdf
+ Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.001_M6.0_InsideOutside_linXlogY.pdf>
+
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.001_M6.0_InsideO
+utside_linXlogY.pdf  used on input line 254.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.001_AllMass_linXlinY.pdf, id=548, 569.
+12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.001_AllMass_linXlinY.pdf Graphic 
+file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.001_AllMass_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.001_AllMass_li
+nXlinY.pdf  used on input line 261.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.001_AllMass_linXlogY.pdf, id=549, 569.12
+625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.001_AllMass_linXlogY.pdf Graphic fi
+le (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.001_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.001_AllMass_linX
+logY.pdf  used on input line 267.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.01_M4.0_InsideOutside_linXlogY.pdf, id
+=550, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.01_M4.0_InsideOutside_linXlogY.pd
+f Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.01_M4.0_InsideOutside_linXlogY.pdf
+>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.01_M4.0_Inside
+Outside_linXlogY.pdf  used on input line 273.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.01_M4.0_InsideOutside_linXlogY.pdf, id=5
+51, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.01_M4.0_InsideOutside_linXlogY.pdf 
+Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.01_M4.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.01_M4.0_InsideOu
+tside_linXlogY.pdf  used on input line 280.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.01_AllMass_linXlogY.pdf, id=552, 569.1
+2625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.01_AllMass_linXlogY.pdf Graphic f
+ile (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.01_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.01_AllMass_lin
+XlogY.pdf  used on input line 287.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.01_AllMass_linXlogY.pdf, id=553, 569.126
+25pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.01_AllMass_linXlogY.pdf Graphic fil
+e (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.01_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.01_AllMass_linXl
+ogY.pdf  used on input line 293.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.1_M4.0_InsideOutside_linXlogY.pdf, id=
+554, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.1_M4.0_InsideOutside_linXlogY.pdf
+ Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.1_M4.0_InsideOutside_linXlogY.pdf>
+
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.1_M4.0_InsideO
+utside_linXlogY.pdf  used on input line 299.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.1_M4.0_InsideOutside_linXlogY.pdf, id=55
+5, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.1_M4.0_InsideOutside_linXlogY.pdf G
+raphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.1_M4.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.1_M4.0_InsideOut
+side_linXlogY.pdf  used on input line 306.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U0.1_AllMass_linXlogY.pdf, id=556, 569.12
+625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U0.1_AllMass_linXlogY.pdf Graphic fi
+le (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U0.1_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U0.1_AllMass_linX
+logY.pdf  used on input line 313.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U0.1_AllMass_linXlogY.pdf, id=557, 569.1262
+5pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U0.1_AllMass_linXlogY.pdf Graphic file
+ (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U0.1_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U0.1_AllMass_linXlo
+gY.pdf  used on input line 319.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U1.0_M2.0_InsideOutside_linXlogY.pdf, id=
+558, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U1.0_M2.0_InsideOutside_linXlogY.pdf
+ Graphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U1.0_M2.0_InsideOutside_linXlogY.pdf>
+
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U1.0_M2.0_InsideO
+utside_linXlogY.pdf  used on input line 325.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U1.0_M2.0_InsideOutside_linXlogY.pdf, id=55
+9, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U1.0_M2.0_InsideOutside_linXlogY.pdf G
+raphic file (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U1.0_M2.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U1.0_M2.0_InsideOut
+side_linXlogY.pdf  used on input line 332.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosthetaSun_U1.0_AllMass_linXlogY.pdf, id=560, 569.12
+625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosthetaSun_U1.0_AllMass_linXlogY.pdf Graphic fi
+le (type pdf)
+<use ../plots/DecayInFlightNuLCosthetaSun_U1.0_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosthetaSun_U1.0_AllMass_linX
+logY.pdf  used on input line 340.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLCosphiSun_U1.0_AllMass_linXlogY.pdf, id=561, 569.1262
+5pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLCosphiSun_U1.0_AllMass_linXlogY.pdf Graphic file
+ (type pdf)
+<use ../plots/DecayInFlightNuLCosphiSun_U1.0_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLCosphiSun_U1.0_AllMass_linXlo
+gY.pdf  used on input line 346.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+[5 <./figs/decay_inflight_sketch1.png> <./figs/decay_inflight_sketch2.png> <./f
+igs/decay_inflight_sketch3.png> <../plots/DecayInFlightNuLCosthetaSun_U1e-05_M8
+.0_InsideOutside_linXlinY.pdf, page is rotated 90 degrees> <../plots/DecayInFli
+ghtNuLCosphiSun_U1e-05_M8.0_InsideOutside_linXlogY.pdf, page is rotated 90 degr
+ees> <../plots/DecayInFlightNuLCosthetaSun_U1e-05_AllMass_linXlinY.pdf, page is
+ rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[6 <../plots/DecayInFlightNuLCosphiSun_U1e-05_AllMass_linXlogY.pdf, page is rot
+ated 90 degrees> <../plots/DecayInFlightNuLCosthetaSun_U0.0001_M8.0_InsideOutsi
+de_linXlinY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLCosphiSu
+n_U0.0001_M8.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plot
+s/DecayInFlightNuLCosthetaSun_U0.0001_AllMass_linXlinY.pdf, page is rotated 90 
+degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[7 <../plots/DecayInFlightNuLCosphiSun_U0.0001_AllMass_linXlogY.pdf, page is ro
+tated 90 degrees> <../plots/DecayInFlightNuLCosthetaSun_U0.001_M6.0_InsideOutsi
+de_linXlinY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLCosphiSu
+n_U0.001_M6.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots
+/DecayInFlightNuLCosthetaSun_U0.001_AllMass_linXlinY.pdf, page is rotated 90 de
+grees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[8 <../plots/DecayInFlightNuLCosphiSun_U0.001_AllMass_linXlogY.pdf, page is rot
+ated 90 degrees> <../plots/DecayInFlightNuLCosthetaSun_U0.01_M4.0_InsideOutside
+_linXlogY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLCosphiSun_
+U0.01_M4.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots/De
+cayInFlightNuLCosthetaSun_U0.01_AllMass_linXlogY.pdf, page is rotated 90 degree
+s>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[9 <../plots/DecayInFlightNuLCosphiSun_U0.01_AllMass_linXlogY.pdf, page is rota
+ted 90 degrees> <../plots/DecayInFlightNuLCosthetaSun_U0.1_M4.0_InsideOutside_l
+inXlogY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLCosphiSun_U0
+.1_M4.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots/Decay
+InFlightNuLCosthetaSun_U0.1_AllMass_linXlogY.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[10 <../plots/DecayInFlightNuLCosphiSun_U0.1_AllMass_linXlogY.pdf, page is rota
+ted 90 degrees> <../plots/DecayInFlightNuLCosthetaSun_U1.0_M2.0_InsideOutside_l
+inXlogY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLCosphiSun_U1
+.0_M2.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots/Decay
+InFlightNuLCosthetaSun_U1.0_AllMass_linXlogY.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 352.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[11 <../plots/DecayInFlightNuLCosphiSun_U1.0_AllMass_linXlogY.pdf, page is rota
+ted 90 degrees>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 353.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 353.
+
+<../plots/DecayInFlightNuLEnergy_U1.0_M6.0_InsideOutside_linXlinY.pdf, id=1656,
+ 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1.0_M6.0_InsideOutside_linXlinY.pdf Grap
+hic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1.0_M6.0_InsideOutside_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1.0_M6.0_InsideOutsid
+e_linXlinY.pdf  used on input line 356.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U1.0_M8.0_InsideOutside_linXlinY.pdf, id=1657,
+ 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1.0_M8.0_InsideOutside_linXlinY.pdf Grap
+hic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1.0_M8.0_InsideOutside_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1.0_M8.0_InsideOutsid
+e_linXlinY.pdf  used on input line 363.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U1.0_M10.0_InsideOutside_linXlinY.pdf, id=1658
+, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1.0_M10.0_InsideOutside_linXlinY.pdf Gra
+phic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1.0_M10.0_InsideOutside_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1.0_M10.0_InsideOutsi
+de_linXlinY.pdf  used on input line 371.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U1.0_AllMass_linXlinY.pdf, id=1659, 569.12625p
+t x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1.0_AllMass_linXlinY.pdf Graphic file (t
+ype pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1.0_AllMass_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1.0_AllMass_linXlinY.
+pdf  used on input line 379.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+[12 <../plots/DecayInFlightNuLEnergy_U1.0_M6.0_InsideOutside_linXlinY.pdf, page
+ is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U1.0_M8.0_InsideOutsid
+e_linXlinY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U1
+.0_M10.0_InsideOutside_linXlinY.pdf, page is rotated 90 degrees> <../plots/Deca
+yInFlightNuLEnergy_U1.0_AllMass_linXlinY.pdf, page is rotated 90 degrees>]
+<../plots/DecayInFlightNuLEnergy_U0.1_M4.0_InsideOutside_linXlinY.pdf, id=1840,
+ 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.1_M4.0_InsideOutside_linXlinY.pdf Grap
+hic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.1_M4.0_InsideOutside_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.1_M4.0_InsideOutsid
+e_linXlinY.pdf  used on input line 388.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.1_AllMass_linXlinY.pdf, id=1841, 569.12625p
+t x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.1_AllMass_linXlinY.pdf Graphic file (t
+ype pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.1_AllMass_linXlinY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.1_AllMass_linXlinY.
+pdf  used on input line 396.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.01_M4.0_InsideOutside_linXlogY.pdf, id=1842
+, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.01_M4.0_InsideOutside_linXlogY.pdf Gra
+phic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.01_M4.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.01_M4.0_InsideOutsi
+de_linXlogY.pdf  used on input line 403.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.01_AllMass_linXlogY.pdf, id=1843, 569.12625
+pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.01_AllMass_linXlogY.pdf Graphic file (
+type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.01_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.01_AllMass_linXlogY
+.pdf  used on input line 411.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.001_M6.0_InsideOutside_linXlogY.pdf, id=184
+4, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.001_M6.0_InsideOutside_linXlogY.pdf Gr
+aphic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.001_M6.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.001_M6.0_InsideOuts
+ide_linXlogY.pdf  used on input line 418.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.001_AllMass_linXlogY.pdf, id=1845, 569.1262
+5pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.001_AllMass_linXlogY.pdf Graphic file 
+(type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.001_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.001_AllMass_linXlog
+Y.pdf  used on input line 426.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.0001_M8.0_InsideOutside_linXlogY.pdf, id=18
+46, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.0001_M8.0_InsideOutside_linXlogY.pdf G
+raphic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.0001_M8.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.0001_M8.0_InsideOut
+side_linXlogY.pdf  used on input line 434.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U0.0001_AllMass_linXlogY.pdf, id=1847, 569.126
+25pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U0.0001_AllMass_linXlogY.pdf Graphic file
+ (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U0.0001_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U0.0001_AllMass_linXlo
+gY.pdf  used on input line 442.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U1e-05_M8.0_InsideOutside_linXlogY.pdf, id=184
+8, 569.12625pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1e-05_M8.0_InsideOutside_linXlogY.pdf Gr
+aphic file (type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1e-05_M8.0_InsideOutside_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1e-05_M8.0_InsideOuts
+ide_linXlogY.pdf  used on input line 449.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+<../plots/DecayInFlightNuLEnergy_U1e-05_AllMass_linXlogY.pdf, id=1849, 569.1262
+5pt x 408.52625pt>
+File: ../plots/DecayInFlightNuLEnergy_U1e-05_AllMass_linXlogY.pdf Graphic file 
+(type pdf)
+<use ../plots/DecayInFlightNuLEnergy_U1e-05_AllMass_linXlogY.pdf>
+Package pdftex.def Info: ../plots/DecayInFlightNuLEnergy_U1e-05_AllMass_linXlog
+Y.pdf  used on input line 457.
+(pdftex.def)             Requested size: 243.54135pt x 174.82132pt.
+
+[13 <../plots/DecayInFlightNuLEnergy_U0.1_M4.0_InsideOutside_linXlinY.pdf, page
+ is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U0.1_AllMass_linXlinY.
+pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U0.01_M4.0_In
+sideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNu
+LEnergy_U0.01_AllMass_linXlogY.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 469.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[14 <../plots/DecayInFlightNuLEnergy_U0.001_M6.0_InsideOutside_linXlogY.pdf, pa
+ge is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U0.001_AllMass_linXl
+ogY.pdf, page is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U0.0001_M
+8.0_InsideOutside_linXlogY.pdf, page is rotated 90 degrees> <../plots/DecayInFl
+ightNuLEnergy_U0.0001_AllMass_linXlogY.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 469.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[15 <../plots/DecayInFlightNuLEnergy_U1e-05_M8.0_InsideOutside_linXlogY.pdf, pa
+ge is rotated 90 degrees> <../plots/DecayInFlightNuLEnergy_U1e-05_AllMass_linXl
+ogY.pdf, page is rotated 90 degrees>] (./main.bbl) [16] (./main.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C5DCAF4F1B48B0604298FF23440398E6;1702.
+ ) 
+Here is how much of TeX's memory you used:
+ 12602 strings out of 473579
+ 210677 string characters out of 5728235
+ 1950957 words of memory out of 5000000
+ 35254 multiletter control sequences out of 15000+600000
+ 570890 words of font info for 83 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,8n,79p,628b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pf
+b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on main.pdf (16 pages, 1230931 bytes).
+PDF statistics:
+ 2393 PDF objects out of 2487 (max. 8388607)
+ 1073 compressed objects within 11 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+
