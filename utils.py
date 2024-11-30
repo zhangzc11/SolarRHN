@@ -200,6 +200,15 @@ def interpolateSpectrum(inputCSV, xvalues):
         spectrum_return.append([ix, iy])
     return np.array(spectrum_return)
 
+def integrateSpectrum(spectrum):
+    sum_all = 0.0
+    for idx in range(len(spectrum)):
+        if idx > 0:
+            sum_all += spectrum[idx][1]*(spectrum[idx][0]-spectrum[idx-1][0])
+        else:
+            sum_all += spectrum[idx][1]*(spectrum[idx+1][0]-spectrum[idx][0])
+    return sum_all
+
 def getRHNSpectrum(spectrum_L, MH, U2):
     energy = spectrum_L[:,0]
     flux_L = spectrum_L[:,1]
@@ -251,14 +260,18 @@ def getDecayedRHNSpectrum(spectrum_orig, MH, U2, distance, length):
             #print(energy[ie], PH, beta, delta_tau, tau_f, tau_cm, flux_orig[ie], math.exp(-1.0*tau_f/tau_cm)*(1.0-math.exp(-1.0*delta_tau/tau_cm)), flux_orig[ie]*math.exp(-1.0*tau_f/tau_cm)*(1.0-math.exp(-1.0*delta_tau/tau_cm)))
     return np.array(spectrum_decayed)
 
+
 # distance: distance from sun to decay point (e.g. earth), unit m
 # length: length of detector, unit m
 def findRatioForDistance(MH, EH, U2, distance):
+    if EH < MH+0.001:
+        return 0.0
     tau_cm = RHN_TauCM(MH, U2)
     PH = math.sqrt(EH*EH - MH*MH)
     beta = PH/EH
     tau_f = MH*distance/(EH*beta*speed_of_light)
     return 1.0-math.exp(-1.0*tau_f/tau_cm)
+
 
 # distance: distance from sun to decay point (e.g. earth), unit m
 # length: length of detector, unit m
@@ -270,6 +283,17 @@ def findDistanceForRatio(MH, EH, U2, ratio):
     beta = PH/EH
     tau_f = -1.0*tau_cm*math.log(1.0-ratio)
     return tau_f*EH*beta*speed_of_light/MH
+
+# distance: distance from sun to decay point (e.g. earth), unit m
+# length: length of detector, unit m
+def findRatioForDistanceSpectrum(MH, spectrum, U2, distance):
+    energy = spectrum[:,0]
+    flux = spectrum[:,1]
+    flux_decayed = np.zeros(len(flux))
+    for ie in range(len(energy)):
+        ratio_this = findRatioForDistance(MH, energy[ie], U2, distance)
+        flux_decayed[ie] = flux[ie]*ratio_this
+    return np.sum(flux_decayed)/np.sum(flux)
 
 # see definition of phi and theta in yutao's thesis fig 3-4
 def transform_phi_to_theta(cosphi, distance):
@@ -316,6 +340,8 @@ def getNulEAndAngleFromRHNDecay(spectrum_orig, MH, U2, distance, length, costhet
     flux_orig = spectrum_orig[:,1]
     npoints_costheta = len(costheta_bins)
 
+    costheta_step = costheta_bins[2]-costheta_bins[1]
+
 
     diff_El_decayed = np.zeros((len(energy), 2))
     diff_costheta_decayed = np.zeros((npoints_costheta, 2))
@@ -352,10 +378,18 @@ def getNulEAndAngleFromRHNDecay(spectrum_orig, MH, U2, distance, length, costhet
     #print("cosphi_needed")
     #print(cosphi_needed)
     # integrate over all RHNs that decay in the give length
+    nRHN_decayed_total = 0.0
     for ie in range(len(energy)):
         diff_El_decayed[ie][0] = energy[ie]
 
         EH = energy[ie]
+
+        eStep = 0.0
+        if ie > 0.0:
+            eStep = energy[ie]-energy[ie-1]
+        else:
+            eStep = energy[ie+1]-energy[ie]
+            
         if EH <= MH:
             continue
         else:
@@ -365,19 +399,29 @@ def getNulEAndAngleFromRHNDecay(spectrum_orig, MH, U2, distance, length, costhet
             tau_f = MH*distance/(EH*beta*speed_of_light)
             delta_tau = MH*length/(EH*beta*speed_of_light)
             nRHN_decayed = flux_orig[ie]*math.exp(-1.0*tau_f/tau_cm)*(1.0-math.exp(-1.0*delta_tau/tau_cm))
+            nRHN_decayed_total += nRHN_decayed
 
             diff_El_temp = np.zeros(len(energy))
             diff_cosphi_temp = np.zeros(npoints_costheta)
             diff_cosphi_needed_temp = np.zeros(npoints_costheta)
 
+            nTotalDecayed = 0.0
+            nReachEarth = 0.0
+
             for icosphi in range(npoints_costheta):
                 costheta_temp = transform_phi_to_theta(costheta_bins[icosphi], distance_m)
-                if costheta_temp < -2.0:
-                    continue
                 for ieL in range(len(energy)):
                     diff_temp = diff_El_costheta_lab(energy[ieL], costheta_bins[icosphi], MH, EH)
+                    nTotalDecayed += diff_temp
+                    if costheta_temp < -2.0:
+                        continue
+                    nReachEarth += diff_temp
                     diff_El_temp[ieL] += diff_temp
                     diff_cosphi_temp[icosphi] += diff_temp
+
+            fractionReachEarth = 0.0
+            if nTotalDecayed > 0.0:
+                fractionReachEarth = nReachEarth/nTotalDecayed
 
             for icosphi in range(npoints_costheta):
                 if cosphi_needed[icosphi] < -2.0:
@@ -393,17 +437,18 @@ def getNulEAndAngleFromRHNDecay(spectrum_orig, MH, U2, distance, length, costhet
             sum_diff_El_temp = np.sum(diff_El_temp)
             if sum_diff_El_temp > 0.0:
                 for ieL in range(len(energy)):
-                    diff_El_decayed[ieL][1] += nRHN_decayed*diff_El_temp[ieL]/sum_diff_El_temp
+                    diff_El_decayed[ieL][1] += nRHN_decayed*fractionReachEarth*diff_El_temp[ieL]/sum_diff_El_temp
+                    #diff_El_decayed[ieL][1] += nRHN_decayed*1*diff_El_temp[ieL]/sum_diff_El_temp
 
             sum_diff_cosphi_temp = np.sum(diff_cosphi_temp)
             if sum_diff_cosphi_temp > 0.0:
                 for icosphi in range(npoints_costheta):
-                    diff_cosphi_decayed[icosphi][1] += nRHN_decayed*diff_cosphi_temp[icosphi]/sum_diff_cosphi_temp
+                    diff_cosphi_decayed[icosphi][1] += nRHN_decayed*eStep*(1.0/costheta_step)*fractionReachEarth*diff_cosphi_temp[icosphi]/sum_diff_cosphi_temp
 
             sum_diff_cosphi_needed_temp = np.sum(diff_cosphi_needed_temp)
             if sum_diff_cosphi_needed_temp > 0.0:
                 for icosphi in range(npoints_costheta):
-                    diff_cosphi_needed[icosphi] += nRHN_decayed*diff_cosphi_needed_temp[icosphi]/sum_diff_cosphi_needed_temp
+                    diff_cosphi_needed[icosphi] += nRHN_decayed*eStep*(1.0/costheta_step)*fractionReachEarth*diff_cosphi_needed_temp[icosphi]/sum_diff_cosphi_needed_temp
 
     #print("diff_cosphi_needed")
     #print(diff_cosphi_needed)
@@ -411,7 +456,7 @@ def getNulEAndAngleFromRHNDecay(spectrum_orig, MH, U2, distance, length, costhet
     #print(diff_costheta_decayed[:,1])
     for iTh in range(npoints_costheta):
         diff_costheta_decayed[iTh][1] = diff_cosphi_needed[iTh]
-
+    #print("DEBUG : ", nRHN_decayed_total, ",", np.sum(diff_El_decayed[:,1]), ", ", integrateSpectrum(diff_El_decayed))
     return diff_El_decayed, diff_costheta_decayed, diff_cosphi_decayed
 
 

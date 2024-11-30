@@ -586,7 +586,7 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
     xtitle_ct = "#nu_{e} angle cos(#theta_{Sun})"
     xtitle_cp = "#nu_{e} angle cos(#phi_{decay})"
     ytitle_El = "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})"
-    ytitle_ct = ytitle_El
+    ytitle_ct = "Neutrino Flux (cm^{-2} s^{-1})"
 
     xmin_El = 0.1
     xmax_El = 16.0
@@ -640,13 +640,16 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
        
         print("===============================================")
         print("MH = ", MH, "U2 = ", U2)
+        print("Tau_CM = ", RHN_TauCM(MH, U2))
+
+        ratio_orbit = findRatioForDistance(MH, E_max_flux, U2, distance_SE)
         # split decay in steps
         # first, decay before reaching earth orbit
         nsteps_earth = 100
         distance_step = distance_SE*1.0/nsteps_earth
         for istep in range(nsteps_earth):
-            print("decay inside earth orbit, distance = ", '%.2f'%(istep*1.0*distance_step/distance_SE), " (SE), istep ", istep+1, "/", 100)
             diff_El_this, diff_costheta_this, diff_cosphi_this = getNulEAndAngleFromRHNDecay(spectrum_R, MH, U2, istep*1.0*distance_step, distance_step, costheta_arr) 
+            print("decay inside earth orbit, distance = ", '%.2f'%(istep*1.0*distance_step/distance_SE), " (SE), istep ", istep+1, "/", nsteps_earth, ", decayed flux = ", integrateSpectrum(diff_El_this))
             for ie in range(len(energy)):
                 diff_El_decayed[ie][1] += diff_El_this[ie][1]
                 diff_El_decayed_inside[ie][1] += diff_El_this[ie][1]
@@ -659,36 +662,53 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
             #print(diff_costheta_this)
             #print(diff_cosphi_this)
             #print("Total flux in this step: ", np.sum(diff_costheta_this[:,1]), np.sum(diff_cosphi_this[:,1]))
+
         # then, decay after flying outside earth orbit
-        ratio_orbit = findRatioForDistance(MH, E_max_flux, U2, distance_SE)
-        if ratio_orbit < 1.0-1e-4:
-            nsteps_outside = int((1.0-ratio_orbit)/0.01)
-            if nsteps_outside == 0:
-                nsteps_outside = 1
-            ratio_step = (1.0 - ratio_orbit)/nsteps_outside
-            for istep in range(nsteps_outside):
-                distance_this = findDistanceForRatio(MH, E_max_flux, U2, ratio_orbit+istep*1.0*ratio_step)
-                distance_next = findDistanceForRatio(MH, E_max_flux, U2, ratio_orbit+(istep+1)*1.0*ratio_step)
-                if istep == nsteps_outside-1:
-                    distance_next = distance_this*1e6
-                if distance_this < 0.0 or distance_next < 0.0:
-                    continue
-                print("decay outside earth orbit, distance = ", '%.2f'%(distance_this/distance_SE), " (SE), istep ", istep+1, "/", nsteps_outside, ", fraction decayed: ", '%.2f' % (ratio_orbit+istep*1.0*ratio_step))
-                diff_El_this, diff_costheta_this, diff_cosphi_this = getNulEAndAngleFromRHNDecay(spectrum_R, MH, U2, distance_this, distance_next-distance_this, costheta_arr) 
-                for ie in range(len(energy)):
-                    diff_El_decayed[ie][1] += diff_El_this[ie][1]
-                    diff_El_decayed_outside[ie][1] += diff_El_this[ie][1]
-                for iTh in range(npoints_costheta):
-                    diff_costheta_decayed[iTh][1] += diff_costheta_this[iTh][1]
-                    diff_costheta_decayed_outside[iTh][1] += diff_costheta_this[iTh][1]
-                    diff_cosphi_decayed[iTh][1] += diff_cosphi_this[iTh][1]
-                    diff_cosphi_decayed_outside[iTh][1] += diff_cosphi_this[iTh][1]
-                #print(diff_El_this)
-                #print(diff_costheta_this)
-                #print(diff_cosphi_this)
-                #print("Total flux in this step: ", np.sum(diff_costheta_this[:,1]), np.sum(diff_cosphi_this[:,1]))
+        distance_start = distance_SE
+        ratio_decayed = findRatioForDistanceSpectrum(MH, spectrum_R, U2, distance_start)
+        distance_next = findDistanceForRatio(MH, E_max_flux, U2, ratio_orbit+(1-ratio_orbit)/10.0)
+
+        print("Ratio decay inside earth orbit: ", ratio_decayed)
+
+        while ratio_decayed < 0.999:
+            diff_El_this, diff_costheta_this, diff_cosphi_this = getNulEAndAngleFromRHNDecay(spectrum_R, MH, U2, distance_start, distance_next-distance_start, costheta_arr) 
+            ratio_old = ratio_decayed
+            ratio_decayed = findRatioForDistanceSpectrum(MH, spectrum_R, U2, distance_next)
+            print("decay outside earth orbit, distance = ", '%.2f'%(distance_start/distance_SE), " (SE), fraction decayed: ", '%.3f' % ratio_decayed, ", decayed flux = ", integrateSpectrum(diff_El_this))
+
+            distance_start = distance_next
+            ratio_decayed2 = findRatioForDistance(MH, E_max_flux, U2, distance_next)
+            ratio_remained2 = 1.0 - ratio_decayed2
+            ratio_next = ratio_decayed2+ratio_remained2/10.0
+            if ratio_remained2 < 0.01:
+                ratio_next = ratio_decayed2+ratio_remained2/2.0
+            distance_next = findDistanceForRatio(MH, E_max_flux, U2, ratio_next)
+
+            for ie in range(len(energy)):
+                diff_El_decayed[ie][1] += diff_El_this[ie][1]
+                diff_El_decayed_outside[ie][1] += diff_El_this[ie][1]
+            for iTh in range(npoints_costheta):
+                diff_costheta_decayed[iTh][1] += diff_costheta_this[iTh][1]
+                diff_costheta_decayed_outside[iTh][1] += diff_costheta_this[iTh][1]
+                diff_cosphi_decayed[iTh][1] += diff_cosphi_this[iTh][1]
+                diff_cosphi_decayed_outside[iTh][1] += diff_cosphi_this[iTh][1]
+            #print(diff_El_this)
+            #print(diff_costheta_this)
+            #print(diff_cosphi_this)
+            #print("Total flux in this step: ", np.sum(diff_costheta_this[:,1]), np.sum(diff_cosphi_this[:,1]))
+
+        print("Total vH flux: ", integrateSpectrum(spectrum_R), np.sum(spectrum_R))
+        print("Flux of vH decay inside earth orbit (int El): ", integrateSpectrum(diff_El_decayed_inside), ", ", np.sum(diff_El_decayed_inside))
+        print("Flux of vH decay inside earth orbit (int costheta): ", integrateSpectrum(diff_costheta_decayed_inside), ", ", np.sum(diff_costheta_decayed_inside))
+        print("Flux of vH decay inside earth orbit (int cosphi): ", integrateSpectrum(diff_cosphi_decayed_inside), ", ", np.sum(diff_cosphi_decayed_inside))
+        print("Flux of vH decay outside earth orbit (int El): ", integrateSpectrum(diff_El_decayed_outside), ", ", np.sum(diff_El_decayed_outside))
+        print("Flux of vH decay outside earth orbit (int costheta): ", integrateSpectrum(diff_costheta_decayed_outside), ", ", np.sum(diff_costheta_decayed_outside))
+        print("Flux of vH decay outside earth orbit (int cosphi): ", integrateSpectrum(diff_cosphi_decayed_outside), ", ", np.sum(diff_cosphi_decayed_outside))
+
 
         plot1DCurve(diff_costheta_decayed, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH), xmin_ct, xmax_ct, ymin_ct, ymax_ct)
+        plot1DCurve(diff_costheta_decayed_inside, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_Inside", xmin_ct, xmax_ct, ymin_ct, ymax_ct)
+        plot1DCurve(diff_costheta_decayed_outside, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_Outside", xmin_ct, xmax_ct, ymin_ct, ymax_ct)
         plotSpectrums([diff_costheta_decayed, diff_costheta_decayed_inside, diff_costheta_decayed_outside], ["Total", "#nu_{H} decay inside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{H} decay outside earth orbit #rightarrow #nu_{e} fly through detector", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="costheta,flux", legNColumns=1)
         plot1DCurve(diff_cosphi_decayed, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_cp, ytitle_ct, fileName+"DecayInFlightNuLCosphiSun_U"+str(U2)+"_M"+str(MH), xmin_ct, xmax_ct, ymin_ct, ymax_ct)
         plotSpectrums([diff_cosphi_decayed, diff_cosphi_decayed_inside, diff_cosphi_decayed_outside], ["Total", "#nu_{H} decay inside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{H} decay outside earth orbit #rightarrow #nu_{e} fly through detector", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_cp, ytitle_ct, fileName+"DecayInFlightNuLCosphiSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="cosphi,flux", legNColumns=1)

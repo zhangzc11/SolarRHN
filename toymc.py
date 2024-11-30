@@ -22,8 +22,6 @@ if __name__ == "__main__":
 
     U2 = [1.0, 0.1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6]
     mRHN = [2.0, 4.0, 6.0, 8.0, 10.0, 12.0]
-    #mRHN = [8.0, 12.0]
-    #U2 = [0.1]
     #mRHN = [2.0]
 
     print("=== doing toy mc for the following U2 and mRHN values ===")
@@ -42,7 +40,7 @@ if __name__ == "__main__":
     spectrums_nuR = getRHNSpectrums(spectrum_nuL_orig, grid_U2M)
 
     print("=== plot the RHN spectrums ===")
-    #plotSpectrums_grid1d(spectrums_nuR[0], spectrum_nuL_orig, grid_U2M[0], "Neutrino Energy (MeV)", "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})", "plots/RHNSpectrum", 0.1, 16.0, 10.0, 1e6)
+    plotSpectrums_grid1d(spectrums_nuR[0], spectrum_nuL_orig, grid_U2M[0], "Neutrino Energy (MeV)", "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})", "plots/RHNSpectrum", 0.1, 16.0, 10.0, 1e6)
 
     #print("=== plot RHN lifetime ===")
     #plotTauCM_vsMU(1e-6, 1e-1, 500, 1.5, 16.5, 500)
@@ -57,7 +55,7 @@ if __name__ == "__main__":
 
     #plotDiff_vs_E_costheta(spectrum_nuL_orig, 10.0, 0.1)
     print("=== plot spectrums of nuL from RHN decay ===")
-    plot_nuL_El_grid1d(spectrum_nuL_orig, grid_U2M[0],  "Neutrino #nu_{e} Energy (MeV)", "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})", "plots/nuLSpectrum", 0.1, 16.0, 10.0, 4.0e6)
+    #plot_nuL_El_grid1d(spectrum_nuL_orig, grid_U2M[0],  "Neutrino #nu_{e} Energy (MeV)", "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})", "plots/nuLSpectrum", 0.1, 16.0, 10.0, 4.0e6)
 
     print("=== plot decay angle costheta of nuL from RHN decay ===")
     #plot_nuL_costheta_grid1d(spectrum_nuL_orig, grid_U2M[0],  "#nu_{e} emission angle cos(#theta)", "r.u.", "plots/nuLEmissionAngle", -1.0, 1.0, 1e-2, 40.0)
@@ -76,8 +74,8 @@ if __name__ == "__main__":
     #    plot_Eee_in_detector_grid1d(spectrum_nuL_orig, grid_U2M[igrid], "E_{e^{+}e^{-}} (MeV)", "Counts / MeV "+str(int(exposure_time)) +" days "+str(int(volume))+" t", "plots/EeeSpectrum_decay_in_detector_integrate", detector_size*detector_size*10000.0, detector_size, exposure_time*24.0*3600.0, 0.1, 16.0, 1e-2, 300.0)
 
     print("=== plot nuL energy and angle distribution for nuR decay before reaching detector ===")
-    #for igrid in range(len(grid_U2M)):
-    #    plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_nuL_orig, grid_U2M[igrid], "plots/")
+    for igrid in range(len(grid_U2M)):
+        plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_nuL_orig, grid_U2M[igrid], "plots/")
     #plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_nuL_orig, grid_U2M[0], "plots/")
 
     #spectrum_R = getRHNSpectrum(spectrum_nuL_orig, 4.0, 1.0)
