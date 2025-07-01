@@ -280,7 +280,7 @@ def plotSpectrums(spectrums, titles, xtitle, ytitle, fileName, xmin=None, xmax=N
         canvas.SetRightMargin(0.02)
         canvas.SetLeftMargin(0.15)
         canvas.SetBottomMargin(0.13)
-        canvas.SetTopMargin(0.08)
+        canvas.SetTopMargin(0.1)
 
     if labels is not None:
         saveSpectrums(spectrums, column_names, fileName, labels)
@@ -334,12 +334,12 @@ def plotSpectrums(spectrums, titles, xtitle, ytitle, fileName, xmin=None, xmax=N
     if len(titles) > len(spectrums):
         graphs[0].SetTitle(titles[-1]+";"+xtitle+";"+ytitle)
 
-    leg = rt.TLegend(0.16, 0.73, 0.97, 0.92)
+    leg = rt.TLegend(0.16, 0.70, 0.97, 0.90)
     leg.SetNColumns(legNColumns)
     leg.SetFillStyle(0)
     leg.SetBorderSize(0)
     leg.SetTextFont(42)
-    leg.SetTextSize(0.032)
+    leg.SetTextSize(0.042)
 
     for ig in range(len(graphs)):
         if ig > 0:
@@ -570,7 +570,7 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
     
     energy = spectrum_L[:,0] # energy points
 
-    npoints_costheta = 201
+    npoints_costheta = 101
     costheta_step = 2.0/(npoints_costheta-1.0)
     costheta_arr = np.zeros(npoints_costheta)
     for i in range(npoints_costheta):
@@ -583,8 +583,8 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
     diff_cosphi_all = []
     diff_El_all = []
     xtitle_El = "Neutrino #nu_{e} Energy (MeV)"
-    xtitle_ct = "#nu_{e} angle cos(#theta_{Sun})"
-    xtitle_cp = "#nu_{e} angle cos(#phi_{decay})"
+    xtitle_ct = "#nu_{e} solar angle cos(#theta_{Sun})"
+    xtitle_cp = "#nu_{e} solar angle cos(#phi_{decay})"
     ytitle_El = "Neutrino Flux (MeV^{-1} cm^{-2} s^{-1})"
     ytitle_ct = "Neutrino Flux (cm^{-2} s^{-1})"
 
@@ -645,11 +645,12 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
         ratio_orbit = findRatioForDistance(MH, E_max_flux, U2, distance_SE)
         # split decay in steps
         # first, decay before reaching earth orbit
-        nsteps_earth = 100
+        nsteps_earth = 200
+        nsteps_near = int(nsteps_earth/10)
         distance_step = distance_SE*1.0/nsteps_earth
-        for istep in range(nsteps_earth):
+        for istep in range(nsteps_earth-nsteps_near):
             diff_El_this, diff_costheta_this, diff_cosphi_this = getNulEAndAngleFromRHNDecay(spectrum_R, MH, U2, istep*1.0*distance_step, distance_step, costheta_arr) 
-            print("decay inside earth orbit, distance = ", '%.2f'%(istep*1.0*distance_step/distance_SE), " (SE), istep ", istep+1, "/", nsteps_earth, ", decayed flux = ", integrateSpectrum(diff_El_this))
+            print("decay inside earth orbit, distance = ", '%.3f'%(istep*1.0*distance_step/distance_SE), " (SE), istep ", istep+1, "/", nsteps_earth, ", decayed flux = ", integrateSpectrum(diff_El_this))
             for ie in range(len(energy)):
                 diff_El_decayed[ie][1] += diff_El_this[ie][1]
                 diff_El_decayed_inside[ie][1] += diff_El_this[ie][1]
@@ -662,6 +663,22 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
             #print(diff_costheta_this)
             #print(diff_cosphi_this)
             #print("Total flux in this step: ", np.sum(diff_costheta_this[:,1]), np.sum(diff_cosphi_this[:,1]))
+        # last step, make it small 
+        distance_step_small = distance_step/10
+        distance_start = distance_SE - nsteps_near*distance_step
+
+        for istep in range(nsteps_near*10):
+            diff_El_this, diff_costheta_this, diff_cosphi_this = getNulEAndAngleFromRHNDecay(spectrum_R, MH, U2, distance_start+istep*1.0*distance_step_small, distance_step_small, costheta_arr) 
+            print("decay inside earth orbit, distance = ", '%.3f'%((distance_start+istep*1.0*distance_step_small)/distance_SE), " (SE), istep ", istep+1, "/", nsteps_near*10, ", decayed flux = ", integrateSpectrum(diff_El_this))
+            for ie in range(len(energy)):
+                diff_El_decayed[ie][1] += diff_El_this[ie][1]
+                diff_El_decayed_inside[ie][1] += diff_El_this[ie][1]
+            for iTh in range(npoints_costheta):
+                diff_costheta_decayed[iTh][1] += diff_costheta_this[iTh][1]
+                diff_costheta_decayed_inside[iTh][1] += diff_costheta_this[iTh][1]
+                diff_cosphi_decayed[iTh][1] += diff_cosphi_this[iTh][1]
+                diff_cosphi_decayed_inside[iTh][1] += diff_cosphi_this[iTh][1]
+   
 
         # then, decay after flying outside earth orbit
         distance_start = distance_SE
@@ -706,14 +723,18 @@ def plot_nuL_El_costheta_decay_in_flight_grid1d(spectrum_L, grid1d_U2M, fileName
         print("Flux of vH decay outside earth orbit (int cosphi): ", integrateSpectrum(diff_cosphi_decayed_outside), ", ", np.sum(diff_cosphi_decayed_outside))
 
 
+        #print("DEBUG: diff_costheta_decayed_inside contents:")
+        #for iTh in range(npoints_costheta):
+        #    print(diff_costheta_decayed_inside[iTh][0], diff_costheta_decayed_inside[iTh][1])
+
         plot1DCurve(diff_costheta_decayed, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH), xmin_ct, xmax_ct, ymin_ct, ymax_ct)
         plot1DCurve(diff_costheta_decayed_inside, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_Inside", xmin_ct, xmax_ct, ymin_ct, ymax_ct)
         plot1DCurve(diff_costheta_decayed_outside, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_Outside", xmin_ct, xmax_ct, ymin_ct, ymax_ct)
-        plotSpectrums([diff_costheta_decayed, diff_costheta_decayed_inside, diff_costheta_decayed_outside], ["Total", "#nu_{H} decay inside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{H} decay outside earth orbit #rightarrow #nu_{e} fly through detector", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="costheta,flux", legNColumns=1)
+        plotSpectrums([diff_costheta_decayed, diff_costheta_decayed_inside, diff_costheta_decayed_outside], ["Total", "#nu_{H} #rightarrow #nu_{e} decay inside earth orbit ", "#nu_{H} #rightarrow #nu_{e} decay outside earth orbit ", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_ct, ytitle_ct, fileName+"DecayInFlightNuLCosthetaSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="costheta,flux", legNColumns=1)
         plot1DCurve(diff_cosphi_decayed, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_cp, ytitle_ct, fileName+"DecayInFlightNuLCosphiSun_U"+str(U2)+"_M"+str(MH), xmin_ct, xmax_ct, ymin_ct, ymax_ct)
-        plotSpectrums([diff_cosphi_decayed, diff_cosphi_decayed_inside, diff_cosphi_decayed_outside], ["Total", "#nu_{H} decay inside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{H} decay outside earth orbit #rightarrow #nu_{e} fly through detector", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_cp, ytitle_ct, fileName+"DecayInFlightNuLCosphiSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="cosphi,flux", legNColumns=1)
+        plotSpectrums([diff_cosphi_decayed, diff_cosphi_decayed_inside, diff_cosphi_decayed_outside], ["Total", "#nu_{H} #rightarrow #nu_{e} decay inside earth orbit ", "#nu_{H} #rightarrow #nu_{e} decay outside earth orbit ", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_cp, ytitle_ct, fileName+"DecayInFlightNuLCosphiSun_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_ct, xmax_ct, ymin_ct, ymax_ct, labels=["Total", "Inside", "Outside"], column_names="cosphi,flux", legNColumns=1)
         plot1DCurve(diff_El_decayed, "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV", xtitle_El, ytitle_El, fileName+"DecayInFlightNuLEnergy_U"+str(U2)+"_M"+str(MH), xmin_El, xmax_El, ymin_El, ymax_El)
-        plotSpectrums([diff_El_decayed, diff_El_decayed_inside, diff_El_decayed_outside, spectrum_L, spectrum_L_left], ["Total (decay inside+outside)", "#nu_{H} decay inside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{H} decay outside earth orbit #rightarrow #nu_{e} fly through detector", "#nu_{e} from ^{8}B (original)", "#nu_{e} from ^{8}B (survived)", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_El, ytitle_El, fileName+"DecayInFlightNuLEnergy_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_El, xmax_El, ymin_El, ymax_El, labels=["Total", "Inside", "Outside", "nuLFrom8B", "nuLFrom8BSurvived"], column_names="energy,flux", legNColumns=1)
+        plotSpectrums([diff_El_decayed, diff_El_decayed_inside, diff_El_decayed_outside, spectrum_L, spectrum_L_left], ["Total (decay inside+outside)", "#nu_{H} #rightarrow #nu_{e} decay inside earth orbit ", "#nu_{H} #rightarrow #nu_{e} decay outside earth orbit ", "#nu_{e} from ^{8}B (original)", "#nu_{e} from ^{8}B (survived)", "U^{2} = "+str(U2)+", m_{#nuH} = "+str(int(MH))+" MeV"], xtitle_El, ytitle_El, fileName+"DecayInFlightNuLEnergy_U"+str(U2)+"_M"+str(MH)+"_InsideOutside", xmin_El, xmax_El, ymin_El, ymax_El, labels=["Total", "Inside", "Outside", "nuLFrom8B", "nuLFrom8BSurvived"], column_names="energy,flux", legNColumns=1)
         print("===============================================")
         print("Total flux of nuR generated:")
         print(np.sum(flux_R))
